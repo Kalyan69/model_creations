@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            color: rgb(28, 182, 28);
+            background-color: aqua;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <center>
+        <table>
+            <tr>
+                <th>SL</th>
+                <th>Date</th>
+                <th>Author</th>
+            </tr>
+            {% for ao in AcessRecord %}
+            <tr>
+                <td>{{ao.pk}}</td>
+                <td>{{ao.date}}</td>
+                <td><a href="/display_topics">{{ao.author}}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+
+</html>

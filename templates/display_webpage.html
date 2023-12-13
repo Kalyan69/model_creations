@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table,th,td
+        {
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            background-color: rgb(42, 130, 165);
+        }
+
+
+    </style>
+    
+    
+</head>
+<body>
+    <center>
+        <h1 class="head">Display_Webpage</h1>
+        <table>
+            <tr>
+                <th>SL</th>
+                <th>Topic_name</th>
+                <th>name</th>
+                <th>url</th>
+                <th>Email</th>
+
+
+
+            </tr>
+            {% for wo in webpages %}
+
+            <tr>
+                <td>{{wo.pk}} </td>
+                <td>{{wo.Topic_name}} </td>
+                <td>{{wo.name}} </td>
+                <td>{{wo.url}} </td>
+                <td>{{wo.Email}} </td>
+                
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </center>
+</body>
+</html>
